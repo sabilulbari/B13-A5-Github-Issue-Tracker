@@ -1,71 +1,201 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Github Issue | Log in</title>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GitHub Issues Tracker - Login</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
-    <!-- fav-icon -->
-    <link rel="shortcut icon" href="./assets/logo.png" type="image/x-icon" />
+    <link rel="stylesheet" href="./style/style.css">
+    
+</head>
+<body class="bg-gray-200 min-h-screen flex items-center justify-center">
+    <!-- Login Page -->
+    <div id="loginPage" class=" w-full max-w-sm sm:max-w-md mx-6">
+        <div class="bg-white rounded-lg shadow-lg p-8">
 
-    <!-- DAisy and Tailwind -->
-    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+            <div class="flex justify-center  mb-6 ">
+                <span class=" w-16"><img src="./assets/github-logo.png" alt="Github logo"></span>
+            </div>
+    
+            <h1 class="text-2xl font-bold text-center text-gray-800 mb-2">GitHub Issues Tracker</h1>
+            
+           
+            <p class="text-center text-gray-600 mb-8">Sign in to manage your issues</p>
+            
+            <!-- Login Form -->
+            <form id="loginForm" class="space-y-6">
+               
+                <div>
+                    <label for="username" class="block text-sm font-medium text-gray-700 mb-1">Username</label>
+                    <input 
+                        type="text" 
+                        id="username" 
+                        name="username"
+                        placeholder="Enter Username"
+                        class="w-full px-4 py-2 border-[1.5px] border-gray-400 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent outline-none transition"
+                        required
+                    >
+                    <p class="text-xs text-gray-500 mt-1">Default: admin</p>
+                </div>
+                
+                
+                <div>
+                    <label for="password" class="block text-sm font-medium text-gray-700 mb-1">Password</label>
+                    <input 
+                        type="password" 
+                        id="password" 
+                        name="password"
+                        placeholder="Enter Password"
+                        class="w-full px-4 py-2 border-[1.5px] border-gray-400 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent outline-none transition"
+                        required
+                    >
+                    <p class="text-xs text-gray-500 mt-1">Default: admin123</p>
+                </div>
+                
+                
+                <button 
+                    type="submit"
+                    class="w-full bg-[#4A00FF] text-white py-2 px-4 rounded-lg hover:bg-purple-700 transition duration-200 font-medium"
+                >
+                    Sign In
+                </button>
+            </form>
+            
+            
+            <div class="relative my-6">
+                <div class="absolute inset-0 flex items-center">
+                    <div class="w-full border-t border-gray-300"></div>
+                </div>
+                <div class="relative flex justify-center text-sm">
+                    <span class="px-2 bg-white text-gray-500">OR</span>
+                </div>
+            </div>
+            
 
-    <!-- Font -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap" rel="stylesheet" />
+            <div class="bg-gray-200 rounded-lg p-4 ">
 
-    <!-- Font Awesome -->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
-      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
+                <h3 class="text-sm font-semibold text-gray-700 mb-2">Demo Credentials</h3>
 
-    <!-- Universal Style -->
-    <style>
-      * {
-        font-family: "Geist", sans-serif;
-      }
-    </style>
-  </head>
-  <body class="min-h-screen max-w-lg bg-base-200 mx-auto sm:max-w-full">
-    <!-- Form Part -->
-    <div class="input-form pt-[32px]">
-      <div class="card bg-base-100 w-full max-w-md shrink-0 mx-auto rounded-2xl mt-[120px]">
-        <div class="card-body">
-          <div class="logo mx-auto pb-6">
-            <img src="./assets/github-logo.png" alt="" />
-          </div>
-          <h3 class="font-semibold text-[24px] text-center">GitHub Issues Tracker</h3>
-          <p class="text-center text-[#64748B] text-[16px] font-normal pb-6">Sign in to manage your issues</p>
-          <fieldset class="fieldset">
-            <label class="label font-medium text-[16px] text-neutral">Username</label>
-            <input id="username" type="text" class="input w-full py-4 px-5 rounded-md bg-base-200 border-none" placeholder="Enter your username" />
+                <div class="space-y-1 text-sm text-gray-600">
+                    <p><strong>Username:</strong> admin</p>
+                    <p><strong>Password:</strong> admin123</p>
+                </div>
 
-            <br />
-
-            <label class="label font-medium text-[16px] text-neutral">Password</label>
-            <input
-              id="password"
-              type="password"
-              maxlength="8"
-              inputmode="numeric"
-              class="input w-full bg-base-200 border-none py-4 px-5 rounded-md"
-              placeholder="Enter your password"
-            />
-
-            <button id="btn-login" class="btn bg-[#4A00FF] text-white mt-4 py-[14px] text-[20px] font-semibold rounded-full mt-[48px]">Sign in</button>
-          </fieldset>
-          <div class="flex flex-row items-center"><hr class="flex-1 border border-sk-black/10"><span class="px-2.5 tracking-wider text-sk-black/50">or</span><hr class="flex-1 border border-sk-black/10"></div>
+            </div>
         </div>
-      </div>
     </div>
 
-    <script src="./script/signin.js"></script>
-  </body>
+    <!-- Main Page -->
+
+    <div id="mainPage" class="hidden w-full min-h-screen bg-gray-200">
+
+        <!-- Navbar -->
+
+        <nav class="bg-white shadow-sm border-b border-gray-200">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 ">
+                <div class="md:flex md:flex-row sm:flex-col  justify-between items-center sm:h-32 md:h-16 p-3">
+                   
+                    <div class="flex justify-center items-center gap-4 ">
+                        <span class=" w-9 "><img src="./assets/github-logo.png" alt="github logo"></span>
+                        <h1 class="text-2xl font-semibold text-gray-800">GitHub Issues Tracker</h1>
+                    </div>
+                    
+                   
+                    <div class="flex justify-center pt-4 md:pt-0 items-center space-x-4 ">
+                        <div class="relative">
+                            <input 
+                                type="text" 
+                                id="searchInput"
+                                placeholder="Search issues..." 
+                                class="w-40 sm:w-64  px-4 py-2 pr-10 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent outline-none"
+                            >
+                            <button 
+                                id="searchBtn"
+                                class="absolute right-2 top-1/2 transform -translate-y-1/2 text-gray-500 hover:text-purple-600"
+                            >
+                            
+                            </button>
+                        </div>
+                        <button 
+                            id="newIssueBtn"
+                            class="bg-[#4A00FF] text-white px-4 py-2 rounded-lg hover:bg-purple-700 transition duration-200 flex items-center"
+                        >
+                          
+                            New issue
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Main Content -->
+        <div class="max-w-[1110px]  mx-auto px-4 sm:px-6 lg:px-8 py-8 ">
+           
+            <div class="bg-white rounded-lg shadow-sm mb-6">
+               
+                <div class="flex p-3 sm:p-6 pt-8 gap-4 sm:gap-8">
+                    <button 
+                        class="tab-btn flex-1 py-2 px-4 bg-gray-200 rounded-lg font-medium transition duration-200 tab-active"
+                        data-tab="all"
+                    >
+                        All
+                    </button>
+                    <button 
+                        class="tab-btn flex-1 py-2 px-4 bg-gray-200 rounded-lg font-medium transition duration-200 "
+                        data-tab="open"
+                    >
+                        Open
+                    </button>
+                    <button 
+                        class="tab-btn flex-1 py-2 px-4 bg-gray-200 rounded-lg font-medium transition duration-200 "
+                        data-tab="closed"
+                    >
+                        Closed
+                    </button>
+                </div>
+                
+                
+                <div class="px-6 py-4 border-t border-gray-200">
+                    <div class="sm:flex justify-between items-center">
+                        <div class=" flex items-center space-x-4 sm:h-[50px] h-[100px]">
+                            <span><img src="./assets/Aperture.png" alt=""></span>
+                            <div>
+                                <h2 class="text-lg font-semibold text-gray-800">
+                                    <span id="issueCount">0</span> Issues
+                                </h2>
+                                <p class="text-sm text-gray-600">Track and manage your project issues</p>
+                            </div>
+                        </div>
+                        <div class="flex justify-center items-center space-x-4">
+                            <div class="flex items-center">
+                                <div class="w-3 h-3 bg-[#00A96E] rounded-full mr-2"></div>
+                                <span class="text-sm text-gray-600">Open</span>
+                            </div>
+                            <div class="flex items-center">
+                                <div class="w-3 h-3 bg-[#A855F7] rounded-full mr-2"></div>
+                                <span class="text-sm text-gray-600">Closed</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+           
+            <div id="loadingSpinner" class="flex justify-center items-center py-12 hidden">
+                <div class="loading-spinner"></div>
+            </div>
+
+            
+            <div id="issuesGrid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+                
+            </div>
+        </div>
+    </div>
+
+ 
+
+    <script src="./script/script.js"></script>
+</body>
 </html>
