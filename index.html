@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Github Issue | Log in</title>
+
+    <!-- fav-icon -->
+    <link rel="shortcut icon" href="./assets/logo.png" type="image/x-icon" />
+
+    <!-- DAisy and Tailwind -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+    <!-- Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap" rel="stylesheet" />
+
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <!-- Universal Style -->
+    <style>
+      * {
+        font-family: "Geist", sans-serif;
+      }
+    </style>
+  </head>
+  <body class="min-h-screen max-w-lg bg-base-200 mx-auto sm:max-w-full">
+    <!-- Form Part -->
+    <div class="input-form pt-[32px]">
+      <div class="card bg-base-100 w-full max-w-md shrink-0 mx-auto rounded-2xl mt-[120px]">
+        <div class="card-body">
+          <div class="logo mx-auto pb-6">
+            <img src="./assets/github-logo.png" alt="" />
+          </div>
+          <h3 class="font-semibold text-[24px] text-center">GitHub Issues Tracker</h3>
+          <p class="text-center text-[#64748B] text-[16px] font-normal pb-6">Sign in to manage your issues</p>
+          <fieldset class="fieldset">
+            <label class="label font-medium text-[16px] text-neutral">Username</label>
+            <input id="username" type="text" class="input w-full py-4 px-5 rounded-md bg-base-200 border-none" placeholder="Enter your username" />
+
+            <br />
+
+            <label class="label font-medium text-[16px] text-neutral">Password</label>
+            <input
+              id="password"
+              type="password"
+              maxlength="8"
+              inputmode="numeric"
+              class="input w-full bg-base-200 border-none py-4 px-5 rounded-md"
+              placeholder="Enter your password"
+            />
+
+            <button id="btn-login" class="btn bg-[#4A00FF] text-white mt-4 py-[14px] text-[20px] font-semibold rounded-full mt-[48px]">Sign in</button>
+          </fieldset>
+          <div class="flex flex-row items-center"><hr class="flex-1 border border-sk-black/10"><span class="px-2.5 tracking-wider text-sk-black/50">or</span><hr class="flex-1 border border-sk-black/10"></div>
+        </div>
+      </div>
+    </div>
+
+    <script src="./script/signin.js"></script>
+  </body>
+</html>
