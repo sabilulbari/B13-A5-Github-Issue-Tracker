@@ -275,7 +275,7 @@ function createIssueCard(issue) {
     year: "numeric",
   });
 
-  const labelsHTML = issue.labels ? issue.labels.map((label) => `<span class="inline-block bg-red-300 text-red-500 text-xs px-2 py-1 rounded">${label}</span>`).join(" ") : "";
+  const labelsHTML = issue.labels ? issue.labels.map((label) => `<span class="inline-block bg-green-300 text-green-500 text-xs px-2 py-1 rounded">${label}</span>`).join(" ") : "";
 
   const priorityColor = getPriorityColor(issue.priority);
 
